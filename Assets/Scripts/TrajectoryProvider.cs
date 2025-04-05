@@ -109,7 +109,7 @@ public class TrajectoryProvider : MonoBehaviour
         _minDistance = minDistance;
     }
 
-    internal void SetForceMultiplier(float shootForce)
+    internal void SetShootForce(float shootForce)
     {
         _shootForce = new Vector2(shootForce, shootForce);
     }
