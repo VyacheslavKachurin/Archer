@@ -18,7 +18,7 @@ public class InputController : MonoBehaviour, IInputProvider
     public float Distance => _distance;
     public Vector2 Direction => _direction;
     public float Angle => _angle;
-    public bool IsPressed => _isPressed;
+    public bool IsAiming => _isPressed;
 
     private Vector2 _inputPos;
     private Vector2 _direction;
@@ -64,5 +64,5 @@ public interface IInputProvider
     float Distance { get; }
     Vector2 Direction { get; }
     float Angle { get; }
-    bool IsPressed { get; }
+    bool IsAiming { get; }
 }

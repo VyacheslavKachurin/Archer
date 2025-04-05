@@ -43,7 +43,7 @@ public class TrajectoryProvider : MonoBehaviour
 
     private void Update()
     {
-        if (!_inputProvider.IsPressed) return;
+        if (!_inputProvider.IsAiming) return;
         if (_inputProvider.Distance < _minDistance || _inputProvider.FirstPos.x < _inputProvider.InputPos.x)
             HideTrajectory();
         else
