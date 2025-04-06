@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Style.uss?fileID=7433441132597879392&amp;guid=20bc1fdc3d3a2422482a7a944b4647e4&amp;type=3#Style" />
+    <ui:VisualElement name="main" style="margin-top: 50px; margin-bottom: 50px;">
+        <ui:VisualElement name="controls-div" style="flex-direction: row; justify-content: space-around; align-items: center;">
+            <ui:Button text="Поменять скин" display-tooltip-when-elided="true" name="skin-btn" class="btn" />
+            <ui:Button text="Спрятать/показать&#10;Препятствие" display-tooltip-when-elided="true" name="obstacle-btn" class="btn" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

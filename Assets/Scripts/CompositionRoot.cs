@@ -8,10 +8,14 @@ public class CompositionRoot : MonoBehaviour
   [SerializeField] private TrajectoryProvider _trajectoryHandler;
   [SerializeField] private PlayerShooter _shooter;
   [SerializeField] private GunToAim _boneAim;
+  [SerializeField] private LevelView _levelView;
+  [SerializeField] private SceneObjects _sceneObjects;
+
+
 
   [SerializeField] private float _distanceThreshold = 0.2f;
   private IInputProvider _inputProvider;
-
+  private SkinSwitch _skinSwitch;
 
   [Header("Game settings")]
   [SerializeField] private int _tracePositionsAmount;
@@ -30,10 +34,18 @@ public class CompositionRoot : MonoBehaviour
     _playerController.OnGunShot += _shooter.Shoot;
     _shooter.ShootForce = _shootForce;
     _shooter.Inject(_inputProvider);
-    
+
     InitTrajectoryHandler();
 
     _inputController.transform.position = _playerController.transform.position;
+    _skinSwitch = new SkinSwitch(_playerController, _shooter);
+    InitView();
+  }
+
+  private void InitView()
+  {
+    _levelView.OnSkinSwitchClicked += _skinSwitch.SwitchSkin;
+    _levelView.OnToggleObstacleClicked += _sceneObjects.ToggleObstacle;
   }
 
   private void Update()

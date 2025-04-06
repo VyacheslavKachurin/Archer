@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public Vector2 GunPos => _gunBone.GetWorldPosition(_skeletonAnimation.transform);
 
     [SerializeField] private SkeletonAnimation _skeletonAnimation;
+    [SerializeField][SpineSkin] private string _skin1Name, _skin2Name;
 
 
     [SpineBone(dataField: "skeletonAnimation")]
@@ -79,5 +80,11 @@ public class PlayerController : MonoBehaviour
     private void PlayAimToIdle()
     {
         PlayAnimation(_aimToIdle, true, _cancelMixDurarion);
+    }
+
+    public void SetSkin(int index)
+    {
+        var targetSkin = index == 0 ? _skin1Name : _skin2Name;
+        _skeletonAnimation.Skeleton.SetSkin(targetSkin);
     }
 }

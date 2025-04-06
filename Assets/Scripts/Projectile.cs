@@ -10,8 +10,9 @@ public class Projectile : MonoBehaviour
 
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private Collider2D _collider;
-    //  [SerializeField] private SpriteRenderer _renderer;
     [SerializeField] private SkeletonAnimation _skeleton;
+    [SerializeField][SpineSkin] private string _skin1Name, _skin2Name;
+
 
     [SpineAnimation]
     [SerializeField]
@@ -38,6 +39,7 @@ public class Projectile : MonoBehaviour
         RotateTowardsFalling();
     }
 
+
     private void RotateTowardsFalling()
     {
         float angle = Mathf.Atan2(_rb.velocity.y, _rb.velocity.x) * Mathf.Rad2Deg;
@@ -48,7 +50,7 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-      
+
         _rb.velocity = Vector2.zero;
         _rb.simulated = false;
         _collider.enabled = false;
@@ -57,7 +59,7 @@ public class Projectile : MonoBehaviour
         _skeleton.AnimationState.SetAnimation(0, _attackAnimation, false);
         _skeleton.state.End += OnAnimationEnd;
     }
-    
+
     private void Explode()
     {
         var hits = Physics2D.OverlapCircleAll(transform.position, _forceRadius);
@@ -84,5 +86,11 @@ public class Projectile : MonoBehaviour
     {
         _forceRadius = forceRadius;
         _explosionForce = explosionForce;
+    }
+
+    public void SetSkin(int index)
+    {
+        var targetskin = index == 0 ? _skin1Name : _skin2Name;
+        _skeleton.Skeleton.SetSkin(targetskin);
     }
 }
