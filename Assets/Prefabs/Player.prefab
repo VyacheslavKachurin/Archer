@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7982920338398856007}
   - component: {fileID: 7982920338398856000}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _skeletonAnimation: {fileID: 7982920339595358731}
+  _skin1Name: bow1
+  _skin2Name: bow2
   _gunName: bow
   _arrowName: bullet
   _shootEvent: {fileID: 11400000, guid: c054682a1471a4d77bb428c460789b43, type: 2}
@@ -67,7 +69,7 @@ GameObject:
   - component: {fileID: 7982920339595358724}
   - component: {fileID: 7982920339595358731}
   - component: {fileID: 7982920339595358727}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ArcherSkeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: b75ffc5c241014b0dbab6fc201e08edd, type: 2}
-  initialSkinName: bow2
+  initialSkinName: bow1
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3

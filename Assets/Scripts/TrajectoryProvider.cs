@@ -23,7 +23,13 @@ public class TrajectoryProvider : MonoBehaviour
     private Vector2 _shootForce;
     private float _minDistance;
 
+    [SerializeField] private LayerMask _activeLayerName;
+    private int _ignoreLayerMask;
 
+    void Start()
+    {
+        _ignoreLayerMask = ~(1 << _activeLayerName);
+    }
 
     public void CreatePoints(int amount)
     {
@@ -52,6 +58,7 @@ public class TrajectoryProvider : MonoBehaviour
 
     private void ShowTrajectory()
     {
+        HideTrajectory();
         var tracePositions = CalculateTrajectory(_startPoint, _inputProvider.Direction);
         DisplayPoints(tracePositions);
     }
@@ -64,9 +71,27 @@ public class TrajectoryProvider : MonoBehaviour
         {
             float t = (i + _timeOffset) * _timeStep;
             Vector2 pos = CalculatePositionAtTime(t, startPos, velocity * _shootForce);
+            if (!IsEmpty(pos)) return tracePositions;
+
+            if (i > 0)
+                if (!IsPathClear(tracePositions[i - 1], pos)) return tracePositions;
             tracePositions.Add(pos);
         }
+
         return tracePositions;
+    }
+
+    private bool IsEmpty(Vector2 point)
+    {
+        Collider2D hit = Physics2D.OverlapPoint(point);
+        return hit == null;
+    }
+
+    private bool IsPathClear(Vector2 from, Vector2 to)
+    {
+        RaycastHit2D hit = Physics2D.Linecast(from, to, _ignoreLayerMask);
+        if (hit.collider != null) return false;
+        return true;
     }
 
     private Vector2 CalculatePositionAtTime(float t, Vector2 startPos, Vector2 velocity)
@@ -87,6 +112,7 @@ public class TrajectoryProvider : MonoBehaviour
 
     public void DisplayPoints(List<Vector2> positions)
     {
+
         for (int i = 0; i < positions.Count; i++)
         {
             var point = _points[i];

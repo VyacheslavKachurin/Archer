@@ -1799,6 +1799,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4080875792318547136, guid: d7bdeaf54cc9441aca09f7cf23347e11, type: 3}
+      propertyPath: _forceRadius
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5214880645948391836, guid: d7bdeaf54cc9441aca09f7cf23347e11, type: 3}
       propertyPath: m_Name
       value: Shooter
@@ -1881,10 +1885,6 @@ PrefabInstance:
       propertyPath: _levelView
       value: 
       objectReference: {fileID: 5071882030602879371}
-    - target: {fileID: 2065561040494648162, guid: 1a96186553ad54e45ad5988cb40889e2, type: 3}
-      propertyPath: _playerPos
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2065561040494648162, guid: 1a96186553ad54e45ad5988cb40889e2, type: 3}
       propertyPath: _sceneObjects
       value: 
@@ -2087,21 +2087,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7982920338398856000, guid: 628ce87b25dcd4af98afdd264c7c7c9b, type: 3}
-      propertyPath: _skin1Name
-      value: bow1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7982920338398856000, guid: 628ce87b25dcd4af98afdd264c7c7c9b, type: 3}
-      propertyPath: _skin2Name
-      value: bow2
-      objectReference: {fileID: 0}
     - target: {fileID: 7982920338398856006, guid: 628ce87b25dcd4af98afdd264c7c7c9b, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7982920338398856006, guid: 628ce87b25dcd4af98afdd264c7c7c9b, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7982920338398856007, guid: 628ce87b25dcd4af98afdd264c7c7c9b, type: 3}
       propertyPath: m_RootOrder
@@ -2150,14 +2138,6 @@ PrefabInstance:
     - target: {fileID: 7982920339595358725, guid: 628ce87b25dcd4af98afdd264c7c7c9b, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7982920339595358730, guid: 628ce87b25dcd4af98afdd264c7c7c9b, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7982920339595358731, guid: 628ce87b25dcd4af98afdd264c7c7c9b, type: 3}
-      propertyPath: initialSkinName
-      value: bow1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 628ce87b25dcd4af98afdd264c7c7c9b, type: 3}

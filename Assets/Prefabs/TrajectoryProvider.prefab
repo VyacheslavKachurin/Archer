@@ -49,3 +49,6 @@ MonoBehaviour:
   _sizeStep: 0.05
   _timeOffset: 1
   _timeStep: 0.1
+  _activeLayerName:
+    serializedVersion: 2
+    m_Bits: 1

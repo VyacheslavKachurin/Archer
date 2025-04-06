@@ -20,8 +20,6 @@ public class CompositionRoot : MonoBehaviour
   [Header("Game settings")]
   [SerializeField] private int _tracePositionsAmount;
   [SerializeField] private float _shootForce;
-  [SerializeField] private float _forceRadius;
-  [SerializeField] private float _explosionForce;
 
   private void Start()
   {
