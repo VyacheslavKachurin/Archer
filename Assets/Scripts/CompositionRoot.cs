@@ -16,6 +16,8 @@ public class CompositionRoot : MonoBehaviour
   [Header("Game settings")]
   [SerializeField] private int _tracePositionsAmount;
   [SerializeField] private float _shootForce;
+  [SerializeField] private float _forceRadius;
+  [SerializeField] private float _explosionForce;
 
   private void Start()
   {
@@ -28,9 +30,10 @@ public class CompositionRoot : MonoBehaviour
     _playerController.OnGunShot += _shooter.Shoot;
     _shooter.ShootForce = _shootForce;
     _shooter.Inject(_inputProvider);
-
+    
     InitTrajectoryHandler();
 
+    _inputController.transform.position = _playerController.transform.position;
   }
 
   private void Update()

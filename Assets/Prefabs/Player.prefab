@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _skeletonAnimation: {fileID: 7982920339595358731}
-  _gunName: 
-  _arrowName: bow
+  _gunName: bow
+  _arrowName: bullet
   _shootEvent: {fileID: 11400000, guid: c054682a1471a4d77bb428c460789b43, type: 2}
   _attackStart: attack_start
   _attackFinish: attack_finish
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: b75ffc5c241014b0dbab6fc201e08edd, type: 2}
-  initialSkinName: bow1
+  initialSkinName: bow2
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3

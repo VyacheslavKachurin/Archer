@@ -45,5 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pointPrefab: {fileID: 2334950115108565509, guid: ad1ed398c3b7141a8acd755676efee1a, type: 3}
-  _startScaleRatio: 1
-  _scaleStep: 0.05
+  _pointStartSize: 1
+  _sizeStep: 0.05
+  _timeOffset: 1
+  _timeStep: 0.1
