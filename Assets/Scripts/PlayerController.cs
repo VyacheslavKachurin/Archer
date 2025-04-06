@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour
     private void AnimateShoot()
     {
         PlayAnimation(_attackFinish);
+        _animState.AddAnimation(_trackIndex, _aimToIdle, true, 0);
     }
 
     [ContextMenu("PlayAimToIdle")]
