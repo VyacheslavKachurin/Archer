@@ -1886,6 +1886,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5071882030602879371}
     - target: {fileID: 2065561040494648162, guid: 1a96186553ad54e45ad5988cb40889e2, type: 3}
+      propertyPath: _shootForce
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065561040494648162, guid: 1a96186553ad54e45ad5988cb40889e2, type: 3}
       propertyPath: _sceneObjects
       value: 
       objectReference: {fileID: 1204572280}
@@ -2010,6 +2014,10 @@ PrefabInstance:
       propertyPath: _cam
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 4867000822592498995, guid: d3e2c1ff2c4574bb3aaacbff43a6f72c, type: 3}
+      propertyPath: _maxLength
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3e2c1ff2c4574bb3aaacbff43a6f72c, type: 3}
 --- !u!1001 &5071882030602879370

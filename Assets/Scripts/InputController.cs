@@ -12,11 +12,12 @@ public class InputController : MonoBehaviour, IInputProvider
 
     [SerializeField] private Camera _cam;
     [SerializeField] private float _minDistance = 0.3f;
+    [SerializeField] private float _maxLength = 5f;
 
     public Vector2 InputPos => _inputPos;
     public Vector2 FirstPos => _firstPos;
     public float Distance => _distance;
-    public Vector2 Direction => _direction;
+    public Vector2 Direction => Vector2.ClampMagnitude(_direction, _maxLength);
     public float Angle => _angle;
     public bool IsAiming => _isPressed;
 
@@ -26,6 +27,7 @@ public class InputController : MonoBehaviour, IInputProvider
     private bool _isPressed;
     private float _distance;
     private float _angle;
+
 
     private void OnMouseDown()
     {
