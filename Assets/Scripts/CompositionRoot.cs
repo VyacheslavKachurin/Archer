@@ -44,6 +44,7 @@ public class CompositionRoot : MonoBehaviour
   {
     _levelView.OnSkinSwitchClicked += _skinSwitch.SwitchSkin;
     _levelView.OnToggleObstacleClicked += _sceneObjects.ToggleObstacle;
+    _levelView.OnTargetsRestore += _sceneObjects.ResetTargets;
   }
 
   private void Update()

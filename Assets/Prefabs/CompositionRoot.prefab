@@ -53,6 +53,4 @@ MonoBehaviour:
   _sceneObjects: {fileID: 0}
   _distanceThreshold: 0.4
   _tracePositionsAmount: 12
-  _shootForce: 12
-  _forceRadius: 0
-  _explosionForce: 0
+  _shootForce: 5
