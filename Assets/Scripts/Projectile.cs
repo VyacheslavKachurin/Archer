@@ -35,14 +35,14 @@ public class Projectile : MonoBehaviour
 
     private void Update()
     {
-        if (_rb.velocity == Vector2.zero) return;
+        if (_rb.linearVelocity == Vector2.zero) return;
         RotateTowardsFalling();
     }
 
 
     private void RotateTowardsFalling()
     {
-        float angle = Mathf.Atan2(_rb.velocity.y, _rb.velocity.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(_rb.linearVelocity.y, _rb.linearVelocity.x) * Mathf.Rad2Deg;
         angle += _rotationOffset;
         // _renderer.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         _skeleton.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
@@ -51,7 +51,7 @@ public class Projectile : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        _rb.velocity = Vector2.zero;
+        _rb.linearVelocity = Vector2.zero;
         _rb.simulated = false;
         _collider.enabled = false;
         Explode();

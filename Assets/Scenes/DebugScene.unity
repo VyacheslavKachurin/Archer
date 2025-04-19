@@ -871,10 +871,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5071882030602879371}
     - target: {fileID: 2065561040494648162, guid: 1a96186553ad54e45ad5988cb40889e2, type: 3}
-      propertyPath: _shootForce
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2065561040494648162, guid: 1a96186553ad54e45ad5988cb40889e2, type: 3}
       propertyPath: _sceneObjects
       value: 
       objectReference: {fileID: 1204572280}
